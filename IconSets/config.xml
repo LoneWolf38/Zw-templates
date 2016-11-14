@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+Weather conditions:
+ 0 = UNKOWN
+ 1 = STORM
+ 2 = THUNDERSTORM
+ 3 = DRIZZLE
+ 4 = RAIN
+ 5 = SHOWERS 
+ 6 = FLURRIES
+ 7 = RAINANDSNOW
+ 8 = SNOW
+ 9 = HAIL
+10 = FOG 
+11 = HAZE 
+12 = WIND
+13 = PARTLY_CLOUDY
+14 = MOSTLY_CLOUDY
+15 = CLEAR 
+16 = FAIR
+-->
+<config>
+  <title>Holo Icon Set</title>
+  <description>Holo Themed Battery and Weather</description>
+  <demo>demo.png</demo>
+  <icons>icons</icons>
+  <default>Holo_Battery.png</default>
+  <mode value="#BLEVN#">Battery Status</mode>
+  <mode value="CurrentWeather">Current Weather</mode>
+  <mode value="TodayWeather">Today's Forecast</mode>
+  <mode value="TomorrowWeather">Tomorrow's Forecast</mode>
+  
+  <condition> <!-- Current Conditions -->
+  <test>#MODE#=CurrentWeather</test>
+		<condition> <!-- ThunderStorm -->
+		<test>#WCCODE#=2</test>
+		<test>#WCCODE#=1</test>
+		<image>tstorm.png</image>
+		</condition>
+		<condition> <!-- Light Rain -->
+		<test>#WCCODE#=3</test>
+		<image>light_rain.png</image>
+		</condition>
+		<condition> <!-- Rain -->
+		<test>#WCCODE#=4</test>
+		<test>#WCCODE#=5</test>
+		<image>rain.png</image>
+		</condition>
+		<condition> <!-- Snow -->
+		<test>#WCCODE#=6</test>
+		<test>#WCCODE#=8</test>
+		<test>#WCCODE#=9</test>
+		<image>snow.png</image>
+		</condition>
+		<condition> <!-- Rain & Snow -->
+		<test>#WCCODE#=7</test> 
+		<image>sleet.png</image>
+		</condition>
+		<condition> <!-- Fog -->
+		<test>#WCCODE#=10</test>
+		<test>#WCCODE#=11</test>
+		<image>fog.png</image>
+		</condition>
+		<condition> <!-- Cloudy -->
+		<test>#WCCODE#=14</test>
+		<image>cloudy.png</image>
+		</condition>
+		<condition> <!-- NIGHT - NIGHT - NIGHT - NIGHT - NIGHT -->
+		<test>#ARHH#&gt;#DHH#</test>
+		<test>#ASHH#&lt;#DHH#</test>
+			<condition> <!-- Partly Cloudy Night -->
+			<test>#WCCODE#=13</test>
+			<image>partly_cloudy_night.png</image>
+			</condition>
+			<condition> <!-- Clear Night -->
+			<test>#WCCODE#=15</test>
+			<test>#WCCODE#=16</test>
+			<image>clear_night.png</image>
+			</condition>
+		</condition>
+		<condition> <!-- Partly Cloudy -->
+		<test>#WCCODE#=13</test>
+		<image>partly_cloudy.png</image>
+		</condition>
+		<condition> <!-- Clear -->
+		<test>#WCCODE#=15</test>
+		<test>#WCCODE#=16</test>
+		<image>clear.png</image>
+		</condition>
+  </condition>
+  <condition> <!-- Today's Forecast -->
+  <test>#MODE#=TodayWeather</test>
+		<condition> <!-- ThunderStorm -->
+		<test>#W0CODE#=2</test>
+		<test>#W0CODE#=1</test>
+		<image>tstorm.png</image>
+		</condition>
+		<condition> <!-- Light Rain -->
+		<test>#W0CODE#=3</test>
+		<image>light_rain.png</image>
+		</condition>
+		<condition> <!-- Rain -->
+		<test>#W0CODE#=4</test>
+		<test>#W0CODE#=5</test>
+		<image>rain.png</image>
+		</condition>
+		<condition> <!-- Snow -->
+		<test>#W0CODE#=6</test>
+		<test>#W0CODE#=8</test>
+		<test>#W0CODE#=9</test>
+		<image>snow.png</image>
+		</condition>
+		<condition> <!-- Rain & Snow -->
+		<test>#W0CODE#=7</test> 
+		<image>sleet.png</image>
+		</condition>
+		<condition> <!-- Fog -->
+		<test>#W0CODE#=10</test>
+		<test>#W0CODE#=11</test>
+		<image>fog.png</image>
+		</condition>
+		<condition> <!-- Cloudy -->
+		<test>#W0CODE#=14</test>
+		<image>cloudy.png</image>
+		</condition>
+		<condition> <!-- NIGHT - NIGHT - NIGHT - NIGHT - NIGHT -->
+		<test>#ASHH#&lt;#DHH#</test>
+			<condition> <!-- Partly Cloudy Night -->
+			<test>#W0CODE#=13</test>
+			<image>partly_cloudy_night.png</image>
+			</condition>
+			<condition> <!-- Clear Night -->
+			<test>#W0CODE#=15</test>
+			<test>#W0CODE#=16</test>
+			<image>clear_night.png</image>
+			</condition>
+		</condition>
+		<condition> <!-- Partly Cloudy -->
+		<test>#W0CODE#=13</test>
+		<image>partly_cloudy.png</image>
+		</condition>
+		<condition> <!-- Clear -->
+		<test>#W0CODE#=15</test>
+		<test>#W0CODE#=16</test>
+		<image>clear.png</image>
+		</condition>
+  </condition>
+  <condition> <!-- Tomorrow's Forecast -->
+  <test>#MODE#=TomorrowWeather</test>
+		<condition> <!-- ThunderStorm -->
+		<test>#W1CODE#=2</test>
+		<test>#W1CODE#=1</test>
+		<image>tstorm.png</image>
+		</condition>
+		<condition> <!-- Light Rain -->
+		<test>#W1CODE#=3</test>
+		<image>light_rain.png</image>
+		</condition>
+		<condition> <!-- Rain -->
+		<test>#W1CODE#=4</test>
+		<test>#W1CODE#=5</test>
+		<image>rain.png</image>
+		</condition>
+		<condition> <!-- Snow -->
+		<test>#W1CODE#=6</test>
+		<test>#W1CODE#=8</test>
+		<test>#W1CODE#=9</test>
+		<image>snow.png</image>
+		</condition>
+		<condition> <!-- Rain & Snow -->
+		<test>#W1CODE#=7</test> 
+		<image>sleet.png</image>
+		</condition>
+		<condition> <!-- Fog -->
+		<test>#W1CODE#=10</test>
+		<test>#W1CODE#=11</test>
+		<image>fog.png</image>
+		</condition>
+		<condition> <!-- Cloudy -->
+		<test>#W1CODE#=14</test>
+		<image>cloudy.png</image>
+		</condition>
+		<condition> <!-- Partly Cloudy -->
+		<test>#W1CODE#=13</test>
+		<image>partly_cloudy.png</image>
+		</condition>
+		<condition> <!-- Clear -->
+		<test>#W1CODE#=15</test>
+		<test>#W1CODE#=16</test>
+		<image>clear.png</image>
+		</condition>
+  </condition>
+  
+  <condition> <!-- Battery Icons -->
+  <test>1=1</test>
+	  <condition> <!-- Unknown -->
+		<test>#MODE#=1</test>
+		<image>Holo_Battery.png</image>
+	  </condition>
+	  <condition> <!-- Full -->
+		<test>#BSTATN#=5</test>
+		<image>Holo_Battery_Full.png</image>
+	  </condition> 
+	  <condition> <!-- Charging -->
+	  <test>#BSTATN#=2</test>
+		  <condition>
+			<test>#MODE#&gt;95</test>
+			<image>Holo_Battery_Full_Charging.png</image>
+		  </condition>  
+		  <condition>
+			<test>#MODE#&gt;90</test>
+			<image>Holo_Battery_95_Charging.png</image>
+		  </condition>  
+		  <condition>
+			<test>#MODE#&gt;85</test>
+			<image>Holo_Battery_90_Charging.png</image>
+		  </condition>  
+		  <condition>
+			<test>#MODE#&gt;80</test>
+			<image>Holo_Battery_85_Charging.png</image>
+		  </condition>  
+		  <condition>
+			<test>#MODE#&gt;75</test>
+			<image>Holo_Battery_80_Charging.png</image>
+		  </condition>  
+		  <condition>
+			<test>#MODE#&gt;70</test>
+			<image>Holo_Battery_75_Charging.png</image>
+		  </condition>  
+		  <condition>
+			<test>#MODE#&gt;65</test>
+			<image>Holo_Battery_70_Charging.png</image>
+		  </condition>  
+		  <condition>
+			<test>#MODE#&gt;60</test>
+			<image>Holo_Battery_65_Charging.png</image>
+		  </condition>  
+		  <condition>
+			<test>#MODE#&gt;55</test>
+			<image>Holo_Battery_60_Charging.png</image>
+		  </condition>  
+		  <condition>
+			<test>#MODE#&gt;50</test>
+			<image>Holo_Battery_55_Charging.png</image>
+		  </condition>  
+		  <condition>
+			<test>#MODE#&gt;45</test>
+			<image>Holo_Battery_50_Charging.png</image>
+		  </condition>  
+		  <condition>
+			<test>#MODE#&gt;40</test>
+			<image>Holo_Battery_45_Charging.png</image>
+		  </condition>  
+		  <condition>
+			<test>#MODE#&gt;35</test>
+			<image>Holo_Battery_40_Charging.png</image>
+		  </condition>  
+		  <condition>
+			<test>#MODE#&gt;30</test>
+			<image>Holo_Battery_35_Charging.png</image>
+		  </condition>  
+		  <condition>
+			<test>#MODE#&gt;25</test>
+			<image>Holo_Battery_30_Charging.png</image>
+		  </condition>  
+		  <condition>
+			<test>#MODE#&gt;20</test>
+			<image>Holo_Battery_25_Charging.png</image>
+		  </condition>  
+		  <condition>
+			<test>#MODE#&gt;15</test>
+			<image>Holo_Battery_20_Charging.png</image>
+		  </condition>  
+		  <condition>
+			<test>#MODE#&gt;10</test>
+			<image>Holo_Battery_15_Charging.png</image>
+		  </condition>  
+		  <condition>
+			<test>#MODE#&gt;5</test>
+			<image>Holo_Battery_10_Charging.png</image>
+		  </condition>  
+		  <condition>
+			<test>#MODE#&lt;10</test>
+			<image>Holo_Battery_Charging.png</image>
+		  </condition>
+	</condition>
+	  <condition> <!-- Discharging -->
+	  <test>1=1</test>
+		  <condition>
+			<test>#MODE#&gt;95</test>
+			<image>Holo_Battery_Full.png</image>
+		  </condition>  
+		  <condition>
+			<test>#MODE#&gt;90</test>
+			<image>Holo_Battery_95.png</image>
+		  </condition>  
+		  <condition>
+			<test>#MODE#&gt;85</test>
+			<image>Holo_Battery_90.png</image>
+		  </condition>  
+		  <condition>
+			<test>#MODE#&gt;80</test>
+			<image>Holo_Battery_85.png</image>
+		  </condition>  
+		  <condition>
+			<test>#MODE#&gt;75</test>
+			<image>Holo_Battery_80.png</image>
+		  </condition>  
+		  <condition>
+			<test>#MODE#&gt;70</test>
+			<image>Holo_Battery_75.png</image>
+		  </condition>  
+		  <condition>
+			<test>#MODE#&gt;65</test>
+			<image>Holo_Battery_70.png</image>
+		  </condition>  
+		  <condition>
+			<test>#MODE#&gt;60</test>
+			<image>Holo_Battery_65.png</image>
+		  </condition>  
+		  <condition>
+			<test>#MODE#&gt;55</test>
+			<image>Holo_Battery_60.png</image>
+		  </condition>  
+		  <condition>
+			<test>#MODE#&gt;50</test>
+			<image>Holo_Battery_55.png</image>
+		  </condition>  
+		  <condition>
+			<test>#MODE#&gt;45</test>
+			<image>Holo_Battery_50.png</image>
+		  </condition>  
+		  <condition>
+			<test>#MODE#&gt;40</test>
+			<image>Holo_Battery_45.png</image>
+		  </condition>  
+		  <condition>
+			<test>#MODE#&gt;35</test>
+			<image>Holo_Battery_40.png</image>
+		  </condition>  
+		  <condition>
+			<test>#MODE#&gt;30</test>
+			<image>Holo_Battery_35.png</image>
+		  </condition>  
+		  <condition>
+			<test>#MODE#&gt;25</test>
+			<image>Holo_Battery_30.png</image>
+		  </condition>  
+		  <condition>
+			<test>#MODE#&gt;20</test>
+			<image>Holo_Battery_25.png</image>
+		  </condition>  
+		  <condition>
+			<test>#MODE#&gt;15</test>
+			<image>Holo_Battery_20.png</image>
+		  </condition>  
+		  <condition>
+			<test>#MODE#&gt;10</test>
+			<image>Holo_Battery_15.png</image>
+		  </condition>  
+		  <condition>
+			<test>#MODE#&gt;5</test>
+			<image>Holo_Battery_10.png</image>
+		  </condition>  
+		  <condition>
+			<test>#MODE#&lt;10</test>
+			<image>Holo_Battery_Low.png</image>
+		  </condition>
+		</condition>
+  </condition>
+  </config>
